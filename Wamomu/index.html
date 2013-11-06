@@ -8,16 +8,26 @@
 	<body>
 		<h1>New Web Project Page</h1>
 
-		<form action="input_button.htm">
+		<form id="loginer">
 			<p>
-				<p>Login : </p>
-				<input type="text" name="Text 1" >
-				<p>Password : </p>
-				<input type="password" name="Text 1">
-			</br>
-				<input type="button" name="Text 2" value="Login"
-				onclick="">
+			<p>
+				Login :
 			</p>
+			<input type="text" name="Text 1" >
+			<p>
+				Password :
+			</p>
+			<input type="password" name="Text 1">
+			</br>
+			<input type="button" name="Text 2" value="Login"
+			onclick="database.php">
+
+			<input type="button" name="Text 2" value="Register" onClick="parent.location='register.html'">
+			</p>
+		</form>
+		
+		<form action="register.html">
+			<input type="submit" value="Clickable Button">
 		</form>
 	</body>
 </html>
