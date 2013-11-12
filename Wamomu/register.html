@@ -8,20 +8,22 @@
 	<body>
 		<h1>New Web Project Page</h1>
 
-		<form action="input_button.htm">
+		<form action="insert.php" method="post">
 			<p>
-				<p>Username : </p>
-				<input type="text" name="Text 1" >
-				<p>Password : </p>
-				<input type="password" name="Text 1">
-				<p>Repeat password: </p>
-				<input type="password" name="Text 1">
-			</br>
-				<input type="button" name="Text 2" value="Login"
-				onclick="">
-				<input type="button" name="Text 2" value="Register"
-				onclick="">
+			<p>
+				Login :
 			</p>
+			<input type="text" name="Username" >
+			<p>
+				Password :
+			</p>
+			<input type="password" name="Password">
+			<p>
+				Password wiederholen:
+			</p>
+			<input type="password" name="PasswordRepeat">
+			</br>
+			<input type="submit" value="Register">
 		</form>
 	</body>
 </html>

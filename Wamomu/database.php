@@ -6,20 +6,16 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-// Create table
-$sql="CREATE TABLE Persons
-(
-Username CHAR(30),
-Password CHAR(30)
-)";
+// // Create table
+// $sql="CREATE TABLE Persons
+// (
+// Username CHAR(30),
+// Password CHAR(30)
+// )";
 
-// Execute query
-if (mysqli_query($con,$sql))
-  {
-  echo "Table persons created successfully";
-  }
-else
-  {
-  echo "Error creating table: " . mysqli_error($con);
-  }
+mysqli_query($con,"INSERT INTO users (Userid, Username, Password)
+VALUES ('Peter', 'Griffin',35)");
+
+mysqli_query($con,"INSERT INTO users (Userid, Username, Password)
+VALUES ('Glenn', 'Quagmire',33)");
 ?>
