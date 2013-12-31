@@ -51,12 +51,22 @@
                 type: "POST",
                 url: "/Wamomuweb/wamomu/meals_details.php",
                 success: function(response) {
-                    alert(response);
+                    var string = response;
+                    alert(string);
+                   // var jsonRes = eval(string);
+                    for (var i = 0; i < string.length; i++) {
+                        var object = string[i];
+                        for (var property in object) {
+                            //alert(object[property]);
+                            var out = object[property];
+                            document.getElementById("jsonoutput").innerHTML += " " + out;
+                        }
+                    }
                     //var test = eval ("(" + response + ")");
                     //var test = JSON.parse(response);
                     //var test = jQuery.parseJSON(response);
-                    alert(test[0]);
-                    alert(test.count);
+                    //alert(test[0]);
+                    //alert(test.count);
                 }
             });
         }
@@ -555,6 +565,15 @@
                 <ul>
                     <li>
                         <div id="Messung3">55 mg/s</div>
+                    </li>
+                </ul>
+            </li>
+            
+             <li>
+                ULULULULULULULULULULLULU
+                <ul>
+                    <li>
+                        <div id="jsonoutput">ULUL</div>
                     </li>
                 </ul>
             </li>
