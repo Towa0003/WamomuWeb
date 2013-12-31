@@ -1,0 +1,568 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+
+    <!-- jQuery-UI-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+    <script>
+        $(function() {
+            $("#accordion , #subaccordion").accordion({
+                header: "h3",
+                collapsible: true,
+                active: false
+            });
+        });
+    </script>
+
+    <script>
+        //        $(function() {
+         //            $("input[type=submit], a, button")
+         //                .button()
+         //                .click(function(event) {
+         //                    alert("Click!");
+         //                    //event.preventDefault();
+         //                });
+         //        });
+    </script>
+
+    <script>
+        function buttonClick(i) {
+            document.getElementById("Frühstück1").innerHTML = "Button" + i + "Frühstück1";
+            document.getElementById("Frühstück2").innerHTML = "Button" + i + "Frühstück2";
+            document.getElementById("Messung1").innerHTML = "Button" + i + "Messung1";
+            document.getElementById("Mittag1").innerHTML = "Button" + i + "Mittag1";
+            document.getElementById("Mittag2").innerHTML = "Button" + i + "Mittag1";
+            document.getElementById("Messung2").innerHTML = "Button" + i + "Messung2";
+            document.getElementById("Abend1").innerHTML = "Button" + i + "Abend1";
+            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
+            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
+        }
+        
+        function jsonParse(){
+                        Score = 100; //Dummy variable
+            $.ajax({
+                type: "POST",
+                url: "/Wamomuweb/wamomu/sql/meals_details.php",
+                data: {
+                    'Score': Score
+                },
+                success: function(response) {
+                    alert(response);
+                    if(response == "true"){
+                        window.location.href = "content.html";
+                    }
+                }
+            });
+        }
+    </script>
+
+</head>
+    
+    
+
+
+<body>
+    <img src="img/graph.png">
+
+    <button onclick="jsonParse()">Json</button>
+    
+    
+    <div id="accordion">
+        <h3>Januar</h3>
+        <div>
+            <button onclick="buttonClick(1)">1.</button>
+            <button onclick="buttonClick(2)">2.</button>
+            <button onclick="buttonClick(3)">3.</button>
+            <button onclick="buttonClick(4)">4.</button>
+            <button onclick="buttonClick(5)">5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+
+        <h3>Februar</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+        </div>
+
+        <h3>März</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>April</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>Mai</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>Juni</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>Juli</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>August</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>September</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>Oktober</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>November</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+
+        <h3>Dezember</h3>
+        <div>
+            <button>1.</button>
+            <button>2.</button>
+            <button>3.</button>
+            <button>4.</button>
+            <button>5.</button>
+            <button>6.</button>
+            <button>7.</button>
+            <button>8.</button>
+            <button>9.</button>
+            <button>10.</button>
+            <button>11.</button>
+            <button>12.</button>
+            <button>13.</button>
+            <button>14.</button>
+            <button>15.</button>
+            <button>16.</button>
+            <button>17.</button>
+            <button>18.</button>
+            <button>19.</button>
+            <button>20.</button>
+            <button>21.</button>
+            <button>22.</button>
+            <button>23.</button>
+            <button>24.</button>
+            <button>25.</button>
+            <button>26.</button>
+            <button>27.</button>
+            <button>28.</button>
+            <button>29.</button>
+            <button>30.</button>
+            <button>31.</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <h2>Test</h2>
+        <ul>
+            <li>
+                Frühstück
+                <ul id="Liste">
+                    <li>
+                        <div id="Frühstück1">Nutellabrot</div>
+                    </li>
+                    <li>
+                        <div id="Frühstück2">O-Saft</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Messung
+                <ul>
+                    <li>
+                        <div id="Messung1">45 mg/s</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Mittagessen
+                <ul>
+                    <li>
+                        <div id="Mittag1">Ente</div>
+                    </li>
+                    <li>
+                        <div id="Mittag2">Cola</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Messung
+                <ul>
+                    <li>
+                        <div id="Messung2">85 mg/s</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Abendessen
+                <ul>
+                    <li>
+                        <div id="Abend1">Salamibrot</div>
+                    </li>
+                    <li>
+                        <div id="Abend2">Sprudel</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Messung
+                <ul>
+                    <li>
+                        <div id="Messung3">55 mg/s</div>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

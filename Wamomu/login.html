@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        function checkUser() {
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("txtSuccess").innerHTML = xmlhttp.responseText;
+                }
+            }
+            str = document.getElementById("Username").value;
+            str1 = document.getElementById("Password").value;
+            xmlhttp.open("GET", "checkuser.php?benutzername=" + str + "&passwort=" + str1, true);
+            xmlhttp.send();
+        }
+
+        function testUser() {
+            str = document.getElementById("Username").value;
+            str1 = document.getElementById("Password").value;
+            Score = 100; //Dummy variable
+            $.ajax({
+                type: "POST",
+                url: "checkuser.php?benutzername=" + str + "&passwort=" + str1,
+                data: {
+                    'Score': Score
+                },
+                success: function(response) {
+                    alert(response);
+                    if(response == "true"){
+                        window.location.href = "content.html";
+                    }
+                }
+            });
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+    <form>
+        <p>
+            <p>
+                Username :
+            </p>
+            <input type="text" name="Username" id="Username">
+            <p>
+                Password :
+            </p>
+            <input type="password" name="Password" id="Password">
+            </br>
+            <input type="button" name="Text 2" value="Login" onClick="testUser()">
+
+            <input type="button" name="Text 2" value="Register" onClick="parent.location='register.html'">
+        </p>
+    </form>
+
+    <div id="txtSuccess">
+        <b>Person info will be listed here.</b>
+    </div>
+
+</body>
+
+</html>

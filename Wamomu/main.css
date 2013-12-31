@@ -1,0 +1,208 @@
+body {
+    overflow:hidden;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#accordion {
+    float: left;
+    width: 334px;
+    margin: 50px;
+}
+#accordion .ui-accordion-content {
+    font-size: 10pt;
+    line-height: 16pt;
+}
+#accordion .ui-accordion-content > * {
+    width:50px;
+    height:50px;
+    margin:5px;
+}
+#accordion .ui-accordion-content a {
+    color: #777;
+}
+#accordion .ui-accordion-header {
+    background-color: #ccc;
+    margin: 2px;
+}
+#accordion .ui-accordion-header a {
+    color: #fff;
+    line-height: 42px;
+    display: block;
+    font-size: 12pt;
+    width: 100%;
+    text-indent: 10px;
+}
+#accordion .ui-accordion-header:first-of-type {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(2) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(3) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(4) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(5) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(6) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(7) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(8) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(9) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(10) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header:nth-of-type(11) {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+
+#accordion .ui-accordion-header:last-of-type {
+    background-color: #a8b700;
+    background-image: -moz-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #a8b700), color-stop(100%, #82922a));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -o-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: -ms-linear-gradient(top, #a8b700 0%, #82922a 100%);
+    background-image: linear-gradient(to bottombottom, #a8b700 0%, #82922a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a8b700', endColorstr='#82922a', GradientType=0);
+    /* IE6-9 */
+}
+#accordion .ui-accordion-header a {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(250, 250, 250, .2);
+}
+#accordion .ui-accordion-content {
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, .4), inset 0px 1px 1px 0px rgba(0, 0, 0, .2);
+}
+#accordion .ui-accordion-content:last-of-type {
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .2), inset 0px 0 0px 0px rgba(0, 0, 0, .5);
+}
+#content {
+    background-color: #EEEEEE;
+    width: 500px;
+    height: 500px;
+    float: right;
+    margin: 50px;
+}
