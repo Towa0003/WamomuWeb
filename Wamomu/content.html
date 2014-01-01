@@ -49,7 +49,7 @@
                 $.each(data, function(key, val) {
                     if (val.date == i) {
                         $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
-                         $('div').append('<button onclick="buttonClick('+ val.date +');">1.</button>');
+                         $('div').append('<button onclick="buttonClick('+ "'" +val.date + "'" +');">1.</button>');
                     }
                 });
             });
