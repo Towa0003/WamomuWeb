@@ -12,9 +12,11 @@ $json = array();
  
 if(mysql_num_rows($result)){
 while($row=mysql_fetch_assoc($result)){
-$json['meals'][]=$row;
+//$json['meals'][]=$row;
+    $json[]=$row;
 }
 }
 mysql_close($con);
-echo json_encode($json); 
+//echo json_encode($json); 
+echo json_encode($json);
 ?> 

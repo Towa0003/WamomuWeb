@@ -45,15 +45,15 @@
             document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
             document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
         }
-        
-        function jsonParse(){
+
+        function jsonParse() {
             $.ajax({
                 type: "POST",
                 url: "/Wamomuweb/wamomu/meals_details.php",
                 success: function(response) {
                     var string = response;
                     alert(string);
-                   // var jsonRes = eval(string);
+                    // var jsonRes = eval(string);
                     for (var i = 0; i < string.length; i++) {
                         var object = string[i];
                         for (var property in object) {
@@ -70,19 +70,29 @@
                 }
             });
         }
+
+        function json() {
+                    $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+                        /* data will hold the php array as a javascript object */
+                        $.each(data, function(key, val) {
+                                $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
+                        });
+                });
+        }
     </script>
 
 </head>
-    
-    
+
+
 
 
 <body>
     <img src="img/graph.png">
 
-    <button onclick="jsonParse()">Json</button>
-    
-    
+    <button onclick="jsonParse()">jsonParse</button>
+    <button onclick="json()">Json</button>
+
+
     <div id="accordion">
         <h3>Januar</h3>
         <div>
@@ -568,8 +578,8 @@
                     </li>
                 </ul>
             </li>
-            
-             <li>
+
+            <li>
                 ULULULULULULULULULULLULU
                 <ul>
                     <li>
