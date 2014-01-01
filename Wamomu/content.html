@@ -44,17 +44,19 @@
             //            document.getElementById("Abend1").innerHTML = "Button" + i + "Abend1";
             //            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
             //            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
-
             $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
-                /* data will hold the php array as a javascript object */
+
                 $.each(data, function(key, val) {
                     if (val.date == i) {
                         $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
+                         $('div').append('<button onclick="buttonClick('+ val.date +');">1.</button>');
                     }
                 });
             });
 
         }
+        
+        
 
 
         function json() {
@@ -62,6 +64,7 @@
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
+                   
                 });
             });
         }
