@@ -35,49 +35,35 @@
 
     <script>
         function buttonClick(i) {
-            document.getElementById("Frühstück1").innerHTML = "Button" + i + "Frühstück1";
-            document.getElementById("Frühstück2").innerHTML = "Button" + i + "Frühstück2";
-            document.getElementById("Messung1").innerHTML = "Button" + i + "Messung1";
-            document.getElementById("Mittag1").innerHTML = "Button" + i + "Mittag1";
-            document.getElementById("Mittag2").innerHTML = "Button" + i + "Mittag1";
-            document.getElementById("Messung2").innerHTML = "Button" + i + "Messung2";
-            document.getElementById("Abend1").innerHTML = "Button" + i + "Abend1";
-            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
-            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
+            //            document.getElementById("Frühstück1").innerHTML = "Button" + i + "Frühstück1";
+            //            document.getElementById("Frühstück2").innerHTML = "Button" + i + "Frühstück2";
+            //            document.getElementById("Messung1").innerHTML = "Button" + i + "Messung1";
+            //            document.getElementById("Mittag1").innerHTML = "Button" + i + "Mittag1";
+            //            document.getElementById("Mittag2").innerHTML = "Button" + i + "Mittag1";
+            //            document.getElementById("Messung2").innerHTML = "Button" + i + "Messung2";
+            //            document.getElementById("Abend1").innerHTML = "Button" + i + "Abend1";
+            //            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
+            //            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
+
+            $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+                /* data will hold the php array as a javascript object */
+                $.each(data, function(key, val) {
+                    if (val.date == i) {
+                        $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
+                    }
+                });
+            });
+
         }
 
-        function jsonParse() {
-            $.ajax({
-                type: "POST",
-                url: "/Wamomuweb/wamomu/meals_details.php",
-                success: function(response) {
-                    var string = response;
-                    alert(string);
-                    // var jsonRes = eval(string);
-                    for (var i = 0; i < string.length; i++) {
-                        var object = string[i];
-                        for (var property in object) {
-                            //alert(object[property]);
-                            var out = object[property];
-                            document.getElementById("jsonoutput").innerHTML += " " + out;
-                        }
-                    }
-                    //var test = eval ("(" + response + ")");
-                    //var test = JSON.parse(response);
-                    //var test = jQuery.parseJSON(response);
-                    //alert(test[0]);
-                    //alert(test.count);
-                }
-            });
-        }
 
         function json() {
-                    $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
-                        /* data will hold the php array as a javascript object */
-                        $.each(data, function(key, val) {
-                                $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
-                        });
+            $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+                /* data will hold the php array as a javascript object */
+                $.each(data, function(key, val) {
+                    $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
                 });
+            });
         }
     </script>
 
@@ -89,18 +75,17 @@
 <body>
     <img src="img/graph.png">
 
-    <button onclick="jsonParse()">jsonParse</button>
     <button onclick="json()">Json</button>
 
 
     <div id="accordion">
         <h3>Januar</h3>
         <div>
-            <button onclick="buttonClick(1)">1.</button>
-            <button onclick="buttonClick(2)">2.</button>
-            <button onclick="buttonClick(3)">3.</button>
-            <button onclick="buttonClick(4)">4.</button>
-            <button onclick="buttonClick(5)">5.</button>
+            <button onclick="buttonClick('2013-10-01');">1.</button>
+            <button onclick="buttonClick(2);">2.</button>
+            <button onclick="buttonClick(3);">3.</button>
+            <button onclick="buttonClick(4);">4.</button>
+            <button onclick="buttonClick(5);">5.</button>
             <button>6.</button>
             <button>7.</button>
             <button>8.</button>
