@@ -55,7 +55,6 @@
                 $('ul').empty();
                 $.each(data, function(key, val) {
                     if (val.date == i) {
-                        
                         $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
                         $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
                     }
@@ -73,25 +72,27 @@
             });
         }
         
-                function measurements() {
+            function measurements() {
                     var array = [];
                     var c = document.getElementById("myCanvas");
                     var ctx = c.getContext("2d");
                     ctx.moveTo(0,0);
-                    ctx.lineTo(200,300);
                     var i = 0;
-            $.getJSON('/Wamomuweb/wamomu/measurements_details.php', function(data) {
+                $.getJSON('/Wamomuweb/wamomu/measurements_details.php', function(data) {
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
-                    console.log(temp*10 + "   " + i);
+                    console.log(temp*20 + "   " + i);
                     ctx.lineTo(i,temp*10);
-                    i +=10;
+                    i +=20;
                     console.log(val.mvalue);
 
                 });
+
             });
+                
+                
                     ctx.stroke();
         }
     </script>
@@ -100,7 +101,7 @@
 
 
 <body>
-    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <canvas id="myCanvas" width="1500" height="500"></canvas>
     <img src="img/graph.png">
 
     <button onclick="json()">Json</button>
