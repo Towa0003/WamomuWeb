@@ -52,9 +52,10 @@
             //            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
             //            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
             $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
-
+                $('ul').empty();
                 $.each(data, function(key, val) {
                     if (val.date == i) {
+                        
                         $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
                         $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
                     }
@@ -71,23 +72,44 @@
                 });
             });
         }
+        
+                function measurements() {
+                    var array = [];
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.moveTo(0,0);
+                    ctx.lineTo(200,300);
+                    var i = 0;
+            $.getJSON('/Wamomuweb/wamomu/measurements_details.php', function(data) {
+                /* data will hold the php array as a javascript object */
+                $.each(data, function(key, val) {
+                    array.push(val.mvalue);
+                    ctx.lineTo(i++,val.mvalue);
+                    console.log(val.mvalue);
+
+                });
+            });
+                    ctx.stroke();
+        }
     </script>
 
 </head>
 
 
 <body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
     <img src="img/graph.png">
 
     <button onclick="json()">Json</button>
+    <button onclick="measurements()">measurements</button>
 
 
     <div id="accordion">
         <h3>Januar</h3>
         <div id="Januar">
-            <button onclick="buttonClick('2013-10-01');">1.</button>
-            <button onclick="buttonClick(2);">2.</button>
-            <button onclick="buttonClick(3);">3.</button>
+            <button onclick="buttonClick('2013-01-01');">1.</button>
+            <button onclick="buttonClick('2013-10-02');">2.</button>
+            <button onclick="buttonClick('2013-10-03');">3.</button>
             <button onclick="buttonClick(4);">4.</button>
             <button onclick="buttonClick(5);">5.</button>
             <button>6.</button>
