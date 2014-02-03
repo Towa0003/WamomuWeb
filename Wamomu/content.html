@@ -84,7 +84,10 @@
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     array.push(val.mvalue);
-                    ctx.lineTo(i++,val.mvalue);
+                    var temp = Math.round(val.mvalue);
+                    console.log(temp*10 + "   " + i);
+                    ctx.lineTo(i,temp*10);
+                    i +=10;
                     console.log(val.mvalue);
 
                 });
