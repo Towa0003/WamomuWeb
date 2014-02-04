@@ -17,7 +17,7 @@
             }
             str = document.getElementById("Username").value;
             str1 = document.getElementById("Password").value;
-            xmlhttp.open("GET", "checkuser.php?benutzername=" + str + "&passwort=" + str1, true);
+            xmlhttp.open("GET", "php/checkuser.php?benutzername=" + str + "&passwort=" + str1, true);
             xmlhttp.send();
         }
 
@@ -27,7 +27,7 @@
             Score = 100; //Dummy variable
             $.ajax({
                 type: "POST",
-                url: "checkuser.php?benutzername=" + str + "&passwort=" + str1,
+                url: "php/checkuser.php?benutzername=" + str + "&passwort=" + str1,
                 data: {
                     'Score': Score
                 },

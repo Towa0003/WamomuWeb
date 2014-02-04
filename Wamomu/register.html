@@ -17,7 +17,7 @@
                     document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
                 }
             }
-            xmlhttp.open("GET", "setuser.php?q=" + str, true);
+            xmlhttp.open("GET", "php/setuser.php?q=" + str, true);
             xmlhttp.send();
         }
     </script>
@@ -39,7 +39,7 @@
             var str = document.getElementById("Username").value;
             var str1 = document.getElementById("Password").value;
             var str2 = document.getElementById("PasswordRepeat").value;
-            xmlhttp.open("GET", "adduser.php?benutzername=" + str + "&passwort=" + str1 + "&passwortrepeat=" + str2, true);
+            xmlhttp.open("GET", "php/adduser.php?benutzername=" + str + "&passwort=" + str1 + "&passwortrepeat=" + str2, true);
             xmlhttp.send();
         }
     </script>

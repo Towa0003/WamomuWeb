@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js"></script>
 
     <!-- jQuery-UI-->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
@@ -26,14 +26,18 @@
         $(document).ready(function() {
             console.log("ready!");
 
-            $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+            $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function(data) {
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     var tag = (val.date).substring(8,10);
                     var monat = (val.date).substring(5,7);
                     var jahr = (val.date).substring(0,4);
                     console.log(val.date + "substring" + tag + " - " + monat + " - " + jahr);
-                   $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
+                   $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">'  + tag  + '.</button>');
+                    
+   
+                    
+                    
                 });
             });
 
@@ -42,28 +46,23 @@
 
     <script>
         function buttonClick(i) {
-            //            document.getElementById("Frühstück1").innerHTML = "Button" + i + "Frühstück1";
-            //            document.getElementById("Frühstück2").innerHTML = "Button" + i + "Frühstück2";
-            //            document.getElementById("Messung1").innerHTML = "Button" + i + "Messung1";
-            //            document.getElementById("Mittag1").innerHTML = "Button" + i + "Mittag1";
-            //            document.getElementById("Mittag2").innerHTML = "Button" + i + "Mittag1";
-            //            document.getElementById("Messung2").innerHTML = "Button" + i + "Messung2";
-            //            document.getElementById("Abend1").innerHTML = "Button" + i + "Abend1";
-            //            document.getElementById("Abend2").innerHTML = "Button" + i + "Abend1";
-            //            document.getElementById("Messung3").innerHTML = "Button" + i + "Messung3";
-            $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+            $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function(data) {
                 $('ul').empty();
                 $.each(data, function(key, val) {
                     if (val.date == i) {
                         $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
-                        $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
+                       // $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
+                        
+
+                        
+                        
                     }
                 });
             });
         }
 
         function json() {
-            $.getJSON('/Wamomuweb/wamomu/meals_details.php', function(data) {
+            $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function(data) {
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
@@ -73,12 +72,13 @@
         }
         
             function measurements() {
+                var start = true;
                     var array = [];
                     var c = document.getElementById("myCanvas");
                     var ctx = c.getContext("2d");
                     ctx.moveTo(0,0);
                     var i = 0;
-                $.getJSON('/Wamomuweb/wamomu/measurements_details.php', function(data) {
+                $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function(data) {
                 /* data will hold the php array as a javascript object */
                 $.each(data, function(key, val) {
                     array.push(val.mvalue);
@@ -87,13 +87,11 @@
                     ctx.lineTo(i,temp*10);
                     i +=20;
                     console.log(val.mvalue);
-
                 });
 
             });
-                
-                
-                    ctx.stroke();
+                ctx.stroke();
+                    
         }
     </script>
 
@@ -104,7 +102,7 @@
     <canvas id="myCanvas" width="1500" height="500"></canvas>
     <img src="img/graph.png">
 
-    <button onclick="json()">Json</button>
+    <button onclick="json()">Jsonnn</button>
     <button onclick="measurements()">measurements</button>
 
 
