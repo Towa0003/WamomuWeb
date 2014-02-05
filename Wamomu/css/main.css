@@ -1,5 +1,20 @@
 body {
-    overflow: hidden;
+    font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
+    background-color: #EAEAEA;
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myCanvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EEEEEE;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
 }
 img {
     display: block;
@@ -13,8 +28,8 @@ h2 {
 }
 #accordion {
     float: left;
-    width: 334px;
-    margin: 50px;
+    width: 300;
+    margin-top: 5%;
 }
 #accordion .ui-accordion-content {
     font-size: 10pt;
@@ -186,8 +201,8 @@ h2 {
     /* IE6-9 */
 }
 #accordion .ui-accordion-header a {
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
     border-right: 1px solid rgba(0, 0, 0, .2);
     border-left: 1px solid rgba(0, 0, 0, .2);
     border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -200,9 +215,55 @@ h2 {
     box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .2), inset 0px 0 0px 0px rgba(0, 0, 0, .5);
 }
 #content {
-    background-color: #EEEEEE;
-    width: 500px;
-    height: 500px;
+    display: inline-block;
+    width: 350px;
+    margin-top: 5%;
     float: right;
-    margin: 50px;
+}
+#contentMeal {
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: #9E9E9E;
+    color: #FFFFFF;
+    width: 350px;
+    height: auto;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contentMeasurement {
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: #9E9E9E;    
+    color: #FFFFFF;
+    width: 350px;
+    height: auto;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contentOverview {
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: #9E9E9E;
+    color: #FFFFFF;
+    width: 350px;
+    height: auto;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer {
+    margin-top: 50%;
+    clear: both;
+    position: relative;
 }

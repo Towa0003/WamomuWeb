@@ -14,8 +14,7 @@
 
 
     <script>
-        
-            $( document ).ready(function() {
+        $( document ).ready(function() {
    start();
 });
         $(function() {
@@ -23,11 +22,10 @@
                 header: "h3",
                 collapsible: true,
                 active: false,
-                heightStyle: "content"
+                heightStyle: "content",
+                  animated: 'bounceslide',
             });
         });
-        
-
     </script>
 
 </head>
@@ -35,8 +33,8 @@
 
 <body>
 
-    <canvas id="myCanvas" width="1500" height="500"></canvas>
-    <img src="img/graph.png">
+    <canvas id="myCanvas" width="1000" height="200"></canvas>
+    <!-- <img src="img/graph.png"> -->
 
     <button onclick="json()">Jsonnn</button>
     <button onclick="measurements()">measurements</button>
@@ -80,7 +78,7 @@
         </div>
 
         <h3>August</h3>
-        <div  id="August">
+        <div id="August">
 
         </div>
 
@@ -104,83 +102,29 @@
 
         </div>
     </div>
-
     <div id="content">
-        <h2>Test</h2>
-        <ul>
-            <li>
-                Frühstück
-                <ul id="Liste">
-                    <li>
-                        <div id="Frühstück1">Nutellabrot</div>
-                    </li>
-                    <li>
-                        <div id="Frühstück2">O-Saft</div>
-                    </li>
-                </ul>
-            </li>
+        <div id="contentMeal">
+            <h2>Mahlzeit</h2>
+            <ul>
 
-            <li>
-                Messung
-                <ul>
-                    <li>
-                        <div id="Messung1">45 mg/s</div>
-                    </li>
-                </ul>
-            </li>
+            </ul>
+        </div>
+        <div id="contentMeasurement">
+            <h2>Messungen</h2>
+            <ul>
 
-            <li>
-                Mittagessen
-                <ul>
-                    <li>
-                        <div id="Mittag1">Ente</div>
-                    </li>
-                    <li>
-                        <div id="Mittag2">Cola</div>
-                    </li>
-                </ul>
-            </li>
+            </ul>
+        </div>
+        <div id="contentOverview">
+            <h2>Übersicht</h2>
+            <ul>
 
-            <li>
-                Messung
-                <ul>
-                    <li>
-                        <div id="Messung2">85 mg/s</div>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                Abendessen
-                <ul>
-                    <li>
-                        <div id="Abend1">Salamibrot</div>
-                    </li>
-                    <li>
-                        <div id="Abend2">Sprudel</div>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                Messung
-                <ul>
-                    <li>
-                        <div id="Messung3">55 mg/s</div>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                ULULULULULULULULULULLULU
-                <ul>
-                    <li>
-                        <div id="jsonoutput">ULUL</div>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <hr>
+        <sub>&copy; Maximilian Mock, Tobias Walter, Christian Murlowski</sub>
     </div>
 </body>
 

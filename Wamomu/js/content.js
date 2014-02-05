@@ -11,45 +11,45 @@
                     var jahr = (val.date).substring(0, 4);
                     if (oldTag == tag && oldMonat == monat && oldJahr == jahr) {
                         console.log("Date exists!");
-                    } else if(monat == "01"){
+                    } else if (monat == "01") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "02"){
+                    } else if (monat == "02") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Februar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "03"){
+                    } else if (monat == "03") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=März]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "04"){
+                    } else if (monat == "04") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=April]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "05"){
+                    } else if (monat == "05") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Mai]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "06"){
+                    } else if (monat == "06") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Juni]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "07"){
+                    } else if (monat == "07") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Juli]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "08"){
+                    } else if (monat == "08") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=August]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "09"){
+                    } else if (monat == "09") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=September]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "10"){
+                    } else if (monat == "10") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Oktober]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "11"){
+                    } else if (monat == "11") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=November]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-                    }else if(monat == "12"){
+                    } else if (monat == "12") {
                         console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
                         $('div[id=Dezember]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
                     }
                     oldTag = tag;
-                    oldMonat= monat;
+                    oldMonat = monat;
                     oldJahr = jahr;
                 });
             });
