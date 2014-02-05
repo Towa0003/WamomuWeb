@@ -2,16 +2,22 @@
             console.log("ready!");
             $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
+                var oldTag = 0;
+                var oldMonat = 0;
+                var oldJahr = 0;
                 $.each(data, function (key, val) {
                     var tag = (val.date).substring(8, 10);
                     var monat = (val.date).substring(5, 7);
                     var jahr = (val.date).substring(0, 4);
-                    console.log(val.date + "substring" + tag + " - " + monat + " - " + jahr);
-                    $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
-
-
-
-
+                    if (oldTag == tag && oldMonat == monat && oldJahr == jahr) {
+                        console.log("Date exists!");
+                    } else {
+                        console.log(val.date + " substring " + tag + " - " + monat + " - " + jahr);
+                        $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">' + tag + '.</button>');
+                    }
+                    oldTag = tag;
+                    oldMonat= monat;
+                    oldJahr = jahr;
                 });
             });
         }
