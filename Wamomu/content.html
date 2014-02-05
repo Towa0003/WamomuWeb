@@ -14,6 +14,10 @@
 
 
     <script>
+        
+            $( document ).ready(function() {
+   start();
+});
         $(function() {
             $("#accordion , #subaccordion").accordion({
                 header: "h3",
@@ -21,12 +25,15 @@
                 active: false
             });
         });
+        
+
     </script>
 
 </head>
 
 
 <body>
+
     <canvas id="myCanvas" width="1500" height="500"></canvas>
     <img src="img/graph.png">
 
