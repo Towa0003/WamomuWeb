@@ -94,7 +94,7 @@
             }
 
             ctx.strokeStyle = '#919191'
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 0.6;
             ctx.closePath();
             ctx.stroke();
 
@@ -120,6 +120,8 @@
                     i += 20;
                     console.log(val.mvalue);
                 });
+                            ctx.lineWidth = 2.5;
+
                 ctx.stroke();
             });
 
