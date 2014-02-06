@@ -63,12 +63,8 @@
                 $('ul').empty();
                 $.each(data, function (key, val) {
                     if (val.date == i) {
-                        $('ul').append('<li id="' + key + '">' + val.meal_id + ' ' + val.mealkind + ' ' + val.meal + ' ' + val.date + '</li>');
+                        $('ul').append('<li id="' + key + '">' + val.mealkind + ' ' + val.meal + ' </li>');
                         // $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
-
-
-
-
                     }
                 });
             });
