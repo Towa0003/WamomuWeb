@@ -92,8 +92,8 @@
             var ctx = c.getContext("2d");
             ctx.beginPath();
             for (var i = 0; i < 21; i++) {
-                ctx.moveTo(0, i * 20);
-                ctx.lineTo(1000, i * 20);
+                ctx.moveTo(0, i * 30);
+                ctx.lineTo(2000, i * 30);
             }
 
             ctx.strokeStyle = '#919191'
@@ -112,18 +112,23 @@
             var ctx = c.getContext("2d");
             ctx.beginPath();
             ctx.strokeStyle = '#65A6D1'
+            ctx.font = "10px sans-serif";
             var i = 0;
+
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
                 $.each(data, function (key, val) {
+                    var tag = (val.date).substring(8, 10);
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
                     console.log(temp + "   " + i);
-                    ctx.lineTo(i, 200-(temp));
-                    i += 20;
+                    ctx.lineTo(i, 250 - (temp * 2));
+                    ctx.fillText(tag, i, 190);
+                    ctx.fillText((val.time).substring(0, 5), i - 12, 200);
+                    i += 40;
                     console.log(val.mvalue);
                 });
-                            ctx.lineWidth = 2.5;
+                ctx.lineWidth = 2.5;
 
                 ctx.stroke();
             });
