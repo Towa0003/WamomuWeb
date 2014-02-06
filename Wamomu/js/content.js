@@ -67,8 +67,11 @@
                 $('ul').empty();
                 $.each(data, function (key, val) {
                     if (val.date == i) {
-                        $('ul').append('<li id="' + key + '">' + val.mealkind + ' ' + val.meal + ' </li>');
+                        $('#contentMealul').append('<li id="' + key + '">' + val.mealkind + ' ' + val.meal + ' </li>');
+                        $('#contentMeasurementsul').append('<li id="' + key + '">' + val.time + ' ' + val.mvalue + ' </li>');
                         // $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
+                        $('#contentOverviewUl').append('<li id="' + key + '">' + val.mealkind + ' ' + val.meal + ' </li>');
+                        $('#contentOverviewUl').append('<li id="' + key + '">' + val.time + ' ' + val.mvalue + ' </li>');
                     }
                 });
             });
