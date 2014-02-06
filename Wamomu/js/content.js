@@ -116,7 +116,7 @@
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
                     console.log(temp + "   " + i);
-                    ctx.lineTo(i, (temp * 3) - 175);
+                    ctx.lineTo(i, 200-(temp));
                     i += 20;
                     console.log(val.mvalue);
                 });
