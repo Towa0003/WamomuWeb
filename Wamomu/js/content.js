@@ -93,8 +93,8 @@
                 $.each(data, function (key, val) {
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
-                    console.log(temp * 20 + "   " + i);
-                    ctx.lineTo(i, temp * 10);
+                    console.log(temp + "   " + i);
+                    ctx.lineTo(i, temp );
                     i += 20;
                     console.log(val.mvalue);
                 });

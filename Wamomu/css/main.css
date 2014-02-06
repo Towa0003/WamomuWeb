@@ -28,7 +28,7 @@ h2 {
 }
 #accordion {
     float: left;
-    width: 300;
+    width: 350px;
     margin-top: 5%;
 }
 #accordion .ui-accordion-content {
