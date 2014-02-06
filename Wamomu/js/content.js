@@ -88,11 +88,15 @@
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             for (var i = 0; i < 21; i++) {
-                ctx.moveTo(0, i * 10);
-                ctx.lineTo(1000, i * 10);
+                ctx.moveTo(0, i * 20);
+                ctx.lineTo(1000, i * 20);
             }
-            ctx.stroke();
+            
+            ctx.strokeStyle = '#D4D4D4'
+            ctx.lineWidth=1;
             ctx.closePath();
+            ctx.stroke();
+            
 
         }
 
@@ -110,7 +114,7 @@
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
                     console.log(temp + "   " + i);
-                    ctx.lineTo(i, temp);
+                    ctx.lineTo(i, (temp*3)-175);
                     i += 20;
                     console.log(val.mvalue);
                 });
