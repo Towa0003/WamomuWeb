@@ -53,6 +53,9 @@
                     oldJahr = jahr;
                 });
             });
+            
+            measurements();
+            
         }
 
         function buttonClick(i) {
@@ -86,7 +89,6 @@
             var array = [];
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            ctx.moveTo(0, 0);
             var i = 0;
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
@@ -98,8 +100,8 @@
                     i += 20;
                     console.log(val.mvalue);
                 });
-
-            });
             ctx.stroke();
+            });
+            
 
         }

@@ -29,7 +29,7 @@ h2 {
 #accordion {
     float: left;
     width: 350px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 #accordion .ui-accordion-content {
     font-size: 10pt;
@@ -217,7 +217,7 @@ h2 {
 #content {
     display: inline-block;
     width: 350px;
-    margin-top: 5%;
+    margin-top: 2%;
     float: right;
 }
 #contentMeal {
@@ -230,7 +230,7 @@ h2 {
     color: #FFFFFF;
     width: 350px;
     height: auto;
-    float: right;
+    float: right
     margin-left: auto;
     margin-right: auto;
 }
@@ -245,6 +245,7 @@ h2 {
     width: 350px;
     height: auto;
     float: right;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -259,6 +260,7 @@ h2 {
     width: 350px;
     height: auto;
     float: right;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
 }
