@@ -92,6 +92,7 @@
                 ctx.lineTo(1000, i * 10);
             }
             ctx.stroke();
+            ctx.closePath();
 
         }
 
