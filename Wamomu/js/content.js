@@ -56,6 +56,10 @@
             
             measurements();
             
+            var days = new Date().getFullYear() % 4 == 0 ? 366 : 365;
+            
+            alert(days);
+            
         }
 
         function buttonClick(i) {
