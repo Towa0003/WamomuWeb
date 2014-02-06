@@ -99,9 +99,10 @@ h2 {
     border-radius: 10px;
     background-color: #9E9E9E;
     color: #FFFFFF;
-    width: 350px;
+    width: 450px;
     height: auto;
-    float: right margin-left: auto;
+    float: right;
+    margin-left: auto;
     margin-right: auto;
 }
 #contentMeasurement {
@@ -112,7 +113,7 @@ h2 {
     border-radius: 10px;
     background-color: #9E9E9E;
     color: #FFFFFF;
-    width: 350px;
+    width: 450px;
     height: auto;
     float: right;
     margin-top: 2%;
@@ -127,7 +128,7 @@ h2 {
     border-radius: 10px;
     background-color: #9E9E9E;
     color: #FFFFFF;
-    width: 350px;
+    width: 450px;
     height: auto;
     float: right;
     margin-top: 2%;
