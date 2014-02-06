@@ -53,13 +53,13 @@
                     oldJahr = jahr;
                 });
             });
-            
+
             measurements();
-            
+
             var days = new Date().getFullYear() % 4 == 0 ? 366 : 365;
-            
+
             alert(days);
-            
+
         }
 
         function buttonClick(i) {
@@ -84,11 +84,24 @@
             });
         }
 
+        function grid() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            for (var i = 0; i < 21; i++) {
+                ctx.moveTo(0, i * 10);
+                ctx.lineTo(1000, i * 10);
+            }
+            ctx.stroke();
+
+        }
+
         function measurements() {
+            grid();
             var start = true;
             var array = [];
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+            ctx.strokeStyle = '#65A6D1'
             var i = 0;
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
@@ -96,12 +109,12 @@
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
                     console.log(temp + "   " + i);
-                    ctx.lineTo(i, temp );
+                    ctx.lineTo(i, temp);
                     i += 20;
                     console.log(val.mvalue);
                 });
-            ctx.stroke();
+                ctx.stroke();
             });
-            
+
 
         }
