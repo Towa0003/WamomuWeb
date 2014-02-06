@@ -35,18 +35,29 @@ h2 {
     width: 350px;
     margin-top: 2%;
     margin-bottom: 2%;
+    
 }
 /*Buttons*/
+
 #accordion .ui-accordion-content > * {
     font-size: 12pt;
     line-height: 30pt;
     width: 50px;
     height: 50px;
-    margin-right:10px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    color: #fff;
+    background-color: #4780A6;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    
+    
 }
-
 #accordion .ui-accordion-header {
-    color:#fff;
+    color: #fff;
     background-color: #2C80B8;
     background-image: -moz-linear-gradient(top, #2C80B8 0%, #2C80B8 100%);
     background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%, #2C80B8), color-stop(100%, #2C80B8));
@@ -67,7 +78,9 @@ h2 {
     border-top: 1px solid rgba(250, 250, 250, .2);
 }
 #accordion .ui-accordion-content {
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, .4), inset 0px 1px 1px 0px rgba(0, 0, 0, .2);
+/*    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, .4), inset 0px 1px 1px 0px rgba(0, 0, 0, .2);*/
+
+    background-color: #4780A6;
 }
 #content {
     display: inline-block;
