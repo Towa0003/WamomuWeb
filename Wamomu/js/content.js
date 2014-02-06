@@ -58,7 +58,7 @@
 
             var days = new Date().getFullYear() % 4 == 0 ? 366 : 365;
 
-            alert(days);
+            //            alert(days);
 
         }
 
@@ -87,16 +87,17 @@
         function grid() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+            ctx.beginPath();
             for (var i = 0; i < 21; i++) {
                 ctx.moveTo(0, i * 20);
                 ctx.lineTo(1000, i * 20);
             }
-            
-            ctx.strokeStyle = '#D4D4D4'
-            ctx.lineWidth=1;
+
+            ctx.strokeStyle = '#919191'
+            ctx.lineWidth = 1;
             ctx.closePath();
             ctx.stroke();
-            
+
 
         }
 
@@ -106,6 +107,7 @@
             var array = [];
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+            ctx.beginPath();
             ctx.strokeStyle = '#65A6D1'
             var i = 0;
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
@@ -114,7 +116,7 @@
                     array.push(val.mvalue);
                     var temp = Math.round(val.mvalue);
                     console.log(temp + "   " + i);
-                    ctx.lineTo(i, (temp*3)-175);
+                    ctx.lineTo(i, (temp * 3) - 175);
                     i += 20;
                     console.log(val.mvalue);
                 });
