@@ -1,10 +1,14 @@
 body {
     font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
-    background-color: #EAEAEA;
+    background-color: #F2F2F2;
     width: 1000px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#body2 {
+    background-color: #EDEDED;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
 }
 /* Canvas Zeichenfläche */
 
@@ -14,16 +18,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #EEEEEE;
-    border-right: 1px solid rgba(0, 0, 0, .2);
-    border-left: 1px solid rgba(0, 0, 0, .2);
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    border-top: 1px solid rgba(0, 0, 0, .2);
 }
 #divCanvas {
     overflow-x: scroll;
-    width: 1000px;
-    border: 1px solid rgba(0,0,0,0.4);
-
+    width: 999px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .1);
 }
 img {
     display: block;
@@ -42,12 +42,13 @@ h2 {
     width: 350px;
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 2%;
 }
 /*Buttons*/
 
 #accordion .ui-accordion-content > * {
     font-size: 12pt;
-    font-weight:600;
+    font-weight: 600;
     line-height: 30pt;
     width: 50px;
     height: 50px;
@@ -89,6 +90,7 @@ h2 {
     display: inline-block;
     width: 350px;
     margin-top: 2%;
+    margin-right:2%;
     float: right;
 }
 #contentMeal {
@@ -96,8 +98,8 @@ h2 {
     border-left: 1px solid rgba(0, 0, 0, .2);
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     border-top: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    background-color: #9E9E9E;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .4);
     color: #FFFFFF;
     width: 450px;
     height: auto;
@@ -110,8 +112,8 @@ h2 {
     border-left: 1px solid rgba(0, 0, 0, .2);
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     border-top: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    background-color: #9E9E9E;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .4);
     color: #FFFFFF;
     width: 450px;
     height: auto;
@@ -125,8 +127,8 @@ h2 {
     border-left: 1px solid rgba(0, 0, 0, .2);
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     border-top: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    background-color: #9E9E9E;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .4);
     color: #FFFFFF;
     width: 450px;
     height: auto;
