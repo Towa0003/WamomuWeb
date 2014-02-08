@@ -11,11 +11,9 @@
             ctx.lineWidth = 0.6;
             ctx.closePath();
             ctx.stroke();
-
-
         }
 
-        function measurements(day, month) {
+        function drawGraph(day, month) {
             console.log("ONCLICK: " + day + ". " + month);
             var start = true;
             var array = [];

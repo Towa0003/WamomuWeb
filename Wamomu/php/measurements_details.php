@@ -6,7 +6,7 @@ $db_name="wamomu"; //replace with database name
  
 $con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
-$sql = "select * from measurements"; 
+$sql = "select * from measurements order by date asc, time asc"; 
 $result = mysql_query($sql);
 $json = array();
  
