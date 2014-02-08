@@ -2,6 +2,8 @@
  var mealsdate = new Array();
  var mealstime = new Array();
  var measurements = [];
+ var measurementsdate = new Array();
+ var measurementstime = new Array();
  var users = [];
 
  function start() {
@@ -82,4 +84,20 @@
          console.log(mealstime[1]); //geht noch
      });
      console.log(mealstime[1]);     //geht nicht mehr
+     checkWithMeasurement("01.01.01");
  }
+
+function checkWithMeasurement(mealdate){
+         $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
+         /* data will hold the php array as a javascript object */
+         $.each(data, function (key, val) {
+             measurementstime.push(val.time);
+             measurementstime.push(val.date);
+         });
+             
+             $.each(measurementstime,function(key,val){
+                 if()
+             });
+         console.log(mealstime[1]); //geht noch
+     });
+}
