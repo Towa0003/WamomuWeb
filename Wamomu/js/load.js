@@ -96,7 +96,7 @@ function checkWithMeasurement(mealdate){
          });
              
              $.each(measurementstime,function(key,val){
-                 if()
+                 // if()
              });
          console.log(mealstime[1]); //geht noch
      });

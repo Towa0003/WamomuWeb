@@ -26,7 +26,7 @@
 
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
-                ctx.strokeStyle = '#65A6D1'
+                ctx.strokeStyle = '#A1D9FF'
                 ctx.beginPath();
                 $.each(data, function (key, val) {
                     // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Linien zeichnen
@@ -61,22 +61,22 @@
                         var temp = Math.round(val.mvalue);
                         // Angeklickter Tag wird hervorgehoben
                         if (day == (val.date).substring(8, 10)) {
-                            ctx.fillStyle = "#00FF00"; // Füllung Kreis
-                            ctx.strokeStyle = '#006300'; // Kontur Kreis
+                            ctx.fillStyle = "#F99224"; // Füllung Kreis
+                            ctx.strokeStyle = '#000000'; // Kontur Kreis
                             ctx.beginPath();
-                            ctx.arc(i, 250 - (temp * 2), 6, 2 * Math.PI, false);
+                            ctx.arc(i, 250 - (temp * 2), 8, 2 * Math.PI, false);
                             ctx.closePath();
                         }
                         // Ansonsten andere Tage werden normal dargestellt
                         else {
-                            ctx.fillStyle = "#65A6D1"; // Füllung Kreis
+                            ctx.fillStyle = "#A1D9FF"; // Füllung Kreis
                             ctx.strokeStyle = '#2B7CB3'; // Kontur Kreis
                             ctx.beginPath();
                             ctx.arc(i, 250 - (temp * 2), 6, 2 * Math.PI, false);
                             ctx.closePath();
                         }
                         ctx.fill();
-                        ctx.lineWidth = 1;
+                        ctx.lineWidth = 1.5;
                         ctx.stroke();
                         i += 40;
 
