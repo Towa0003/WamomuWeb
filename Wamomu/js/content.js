@@ -15,7 +15,7 @@
                         //$('#contentMeasurementsul').append('<li id="' + key + '">' + (val.time).substring(0, 5) + ' Uhr    -    Messwert: ' + val.mvalue + ' </li>');
                         console.log(val.mvalue);
                         // $('div[id=Januar]').append('<button onclick="buttonClick(' + "'" + val.date + "'" + ');">1.</button>');
-                        $('#contentOverviewUl').append('<li id="' + key + '">' + (val.time).substring(0, 5) + ' Uhr    -    Messwert : ' + val.mvalue + ' </li>');
+                        $('#contentOverviewUl').append('<li id="' + key + '">' + (val.time).substring(0, 5) + ' Uhr    -    Messwert : ' + val.mvalue + ' mg/dl  </li>');
                     }
                 });
                 drawGraph(i.substring(8, 10), i.substring(5, 7));
