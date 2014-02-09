@@ -19,9 +19,7 @@
                     }
                 });
                 drawGraph(i.substring(8, 10), i.substring(5, 7));
-
             });
-
         }
 
         function json() {
