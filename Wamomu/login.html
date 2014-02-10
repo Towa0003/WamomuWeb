@@ -34,6 +34,7 @@
                 success: function(response) {
                     alert(response);
                     if(response == "true"){
+                        document.cookie="userid=" + str;
                         window.location.href = "content.html";
                     }
                 }
