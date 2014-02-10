@@ -16,26 +16,23 @@
         function drawGraph(day, month, uid) {
             console.log("ONCLICK: " + day + ". " + month + " USER: " + uid);
             var start = true;
-            var array = [];
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.clearRect(0, 0, c.width, c.height);
-            grid();
             ctx.font = "10px sans-serif";
             var i = 10;
+            grid();
 
             $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
-                ctx.strokeStyle = '#A1D9FF'
+                ctx.strokeStyle = '#2B7CB3'
                 ctx.beginPath();
                 $.each(data, function (key, val) {
                     if (val.users_id == uid) {
                         // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Linien zeichnen
                         if (month == (val.date).substring(5, 7)) {
                             var tag = (val.date).substring(8, 10);
-                            array.push(val.mvalue);
                             var temp = Math.round(val.mvalue);
-                            console.log(temp + "   " + i);
 
                             // Linien zu den Messwerten zeichnen
                             ctx.lineTo(i, 250 - (temp * 2));
@@ -60,7 +57,6 @@
                     if (val.users_id == uid) {
                         // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Punkte an Messwert zeichnen
                         if (month == (val.date).substring(5, 7)) {
-                            array.push(val.mvalue);
                             var temp = Math.round(val.mvalue);
                             // Angeklickter Tag wird hervorgehoben
                             if (day == (val.date).substring(8, 10)) {
@@ -90,4 +86,34 @@
                 });
             });
 
+        }
+
+        function mealStroke(day, month, uid) {
+
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.clearRect(0, 0, c.width, c.height);
+            var i = 10;
+
+            $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
+                /* data will hold the php array as a javascript object */
+                ctx.strokeStyle = '#000000'
+                $.each(data, function (key, val) {
+                    if (val.users_id == uid) {
+                        // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Linien zeichnen
+                        if (day == (val.date).substring(8, 10)) {
+                            // Linien zu den Messwerten zeichnen
+                            ctx.beginPath();
+                            ctx.moveTo(i,  30);
+                            ctx.lineTo(i, 100);
+                            ctx.lineWidth = 2.5;
+                            ctx.closePath();
+                        } else {
+                            // Ansonsten nichts zeichnen
+                        }
+                    }
+                });
+                ctx.stroke();
+                ctx.closePath();
+            });
         }

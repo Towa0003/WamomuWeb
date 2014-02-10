@@ -18,6 +18,7 @@
                         $('#contentOverviewUl').append('<li id="' + key + '">' + (val.time).substring(0, 5) + ' Uhr    -    Messwert : ' + val.mvalue + ' mg/dl  </li>');
                     }
                 });
+                mealStroke(date.substring(8, 10), date.substring(5, 7), userid);
                 drawGraph(date.substring(8, 10), date.substring(5, 7), userid);
             });
         }
