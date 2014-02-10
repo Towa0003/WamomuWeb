@@ -65,6 +65,7 @@
                                 ctx.beginPath();
                                 ctx.arc(i, 250 - (temp * 2), 8, 2 * Math.PI, false);
                                 ctx.closePath();
+
                             }
                             // Ansonsten andere Tage werden normal dargestellt
                             else {
@@ -97,23 +98,26 @@
 
             $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
-                ctx.strokeStyle = '#000000'
+                ctx.strokeStyle = '#F00000'
                 $.each(data, function (key, val) {
                     if (val.users_id == uid) {
                         // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Linien zeichnen
-                        if (day == (val.date).substring(8, 10)) {
-                            // Linien zu den Messwerten zeichnen
-                            ctx.beginPath();
-                            ctx.moveTo(i,  30);
-                            ctx.lineTo(i, 100);
-                            ctx.lineWidth = 2.5;
-                            ctx.closePath();
-                        } else {
-                            // Ansonsten nichts zeichnen
+                        if (month == (val.date).substring(5, 7)) {
+                            if (day == (val.date).substring(8, 10)) {
+                                // Linien zu den Messwerten zeichnen
+                                ctx.beginPath();
+                                ctx.moveTo(i, 0);
+                                ctx.lineTo(i, 200);
+                                ctx.closePath();
+                                ctx.lineWidth = 2.5;
+                ctx.stroke();
+                ctx.closePath();
+                            } else {
+                                // Ansonsten nichts zeichnen
+                            }
+                            i += 80;
                         }
                     }
                 });
-                ctx.stroke();
-                ctx.closePath();
             });
         }
