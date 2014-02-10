@@ -1,16 +1,31 @@
+header {
+    background-color: #2B7CB3;
+    height: 100px;
+    box-shadow: 0 1px 3px #000000;
+    margin-bottom: 20px;
+}
+#headertext {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 -1px 3px #666666, 0 1px 3px #000000;
+    font-size: 50px;
+    line-height: 100px;
+}
+html,
 body {
     font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
-    background-color: #F2F2F2;
-    width: 1000px;
+    background-color: #EDEDED;
+/*    min-width: 1000px;*/
+    margin: 0;
+    padding: 0;
+}
+#body2 {
+    background-color: #EDEDED;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 1000px;
 }
-/*
-#body2 {
-    background-color: #EDEDED;
-}
-*/
 /* Canvas Zeichenfläche */
 
 #myCanvas {
@@ -25,11 +40,6 @@ body {
     width: 999px;
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 h2 {
     text-align: center;
@@ -91,7 +101,7 @@ h2 {
     display: inline-block;
     width: 350px;
     margin-top: 2%;
-    margin-right:2%;
+    margin-right: 2%;
     float: right;
 }
 #contentMeal {
@@ -143,20 +153,3 @@ h2 {
     clear: both;
     position: relative;
 }
-
-
-header {
-    background-color: #2B7CB3;
-    width: auto;
-    height: 100px;
-    box-shadow: 0 1px 3px #000000;
-    margin-bottom: 10px;
-}
-#headertext {
-    text-align: center;
-    color: #FFF;
-    text-shadow: 0 -1px 3px #666666, 0 1px 3px #000000;
-    font-size: 50px;
-    line-height: 100px;
-}
-
