@@ -1,12 +1,22 @@
 #login {
     margin: 0 auto;
-    width:250px;
+    width: 250px;
     height: 250px;
-    text-align:center;
+    text-align: center;
 }
-
-#head {
-    background-color: "#C6C6C6";
-    width:1000px;
-    height: 100px;
+header {
+    background-color: #2B7CB3;
+    width: auto;
+    height: 50px;
+}
+#headertext {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 25px;
+    vertical-align: middle;
+}
+html,
+body {
+    margin: 0;
+    padding: 0
 }
