@@ -1,10 +1,3 @@
- var meals = new Array();
- var mealsdate = new Array();
- var mealstime = new Array();
- var measurements = [];
- var measurementsdate = new Array();
- var measurementstime = new Array();
- var users = [];
  var userid = 0;
  var username;
  var cookie;
@@ -80,7 +73,6 @@
          var d = oldTag
          var m = oldMonat;
          drawGraph(d, m, userid);
-         initializemeals();
          drawGraph(d, m, userid);
      });
 
@@ -95,49 +87,7 @@
              if (val.user == user) {
                  userid = val.id;
                  console.log("userid " + userid);
-                 //setuserid(userid);
-
              }
          });
-         console.log("userid" + userid);
-     });
-     console.log("userid" + userid); //geht nicht mehr
-
- }
-
- function setuserid(id) {
-     console.log("id " + id)
-     userid = id;
- }
-
-
-
- function initializemeals() {
-     console.log("initializemeals");
-     $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
-         /* data will hold the php array as a javascript object */
-         $.each(data, function (key, val) {
-             mealstime.push(val.time);
-             mealsdate.push(val.date);
-
-         });
-         console.log(mealstime[1]); //geht noch
-     });
-     console.log(mealstime[1]); //geht nicht mehr
-     checkWithMeasurement("01.01.01");
- }
-
- function checkWithMeasurement(mealdate) {
-     $.getJSON('/Wamomuweb/wamomu/php/measurements_details.php', function (data) {
-         /* data will hold the php array as a javascript object */
-         $.each(data, function (key, val) {
-             measurementstime.push(val.time);
-             measurementstime.push(val.date);
-         });
-
-         $.each(measurementstime, function (key, val) {
-             // if()
-         });
-         console.log(mealstime[1]); //geht noch
      });
  }

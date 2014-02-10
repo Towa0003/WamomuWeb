@@ -4,37 +4,25 @@
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script>
-        function checkUser() {
-            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else { // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("txtSuccess").innerHTML = xmlhttp.responseText;
+        $(document).ready(function(data){
+           $('#Password,#Username').keypress(function(event){
+                if(event.keyCode == 13){
+                    $('#loginBtn').click();
                 }
-            }
-            str = document.getElementById("Username").value;
-            str1 = document.getElementById("Password").value;
-            xmlhttp.open("GET", "php/checkuser.php?benutzername=" + str + "&passwort=" + str1, true);
-            xmlhttp.send();
-        }
+            });
+        });
+
 
         function testUser() {
-            str = document.getElementById("Username").value;
-            str1 = document.getElementById("Password").value;
-            Score = 100; //Dummy variable
+            username = document.getElementById("Username").value;
+            password = document.getElementById("Password").value;
             $.ajax({
                 type: "POST",
-                url: "php/checkuser.php?benutzername=" + str + "&passwort=" + str1,
-                data: {
-                    'Score': Score
-                },
+                url: "php/checkuser.php?benutzername=" + username + "&passwort=" + password,
                 success: function(response) {
                     alert(response);
                     if(response == "true"){
-                        document.cookie="userid=" + str;
+                        document.cookie="userid=" + username;
                         window.location.href = "content.html";
                     }
                 }
@@ -47,7 +35,7 @@
 
 <body>
 
-<header id="head">p</header>
+    <header id="head">p</header>
 
     <form id="login">
         <p>
@@ -60,7 +48,7 @@
             </p>
             <input type="password" name="Password" id="Password">
             </br>
-            <input type="button" name="Text 2" value="Login" onClick="testUser()">
+            <input type="button" name="Text 2" value="Login" id="loginBtn" onClick="testUser()">
 
             <input type="button" name="Text 2" value="Register" onClick="parent.location='register.html'">
         </p>
