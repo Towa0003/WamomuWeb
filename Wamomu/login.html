@@ -20,10 +20,12 @@
                 type: "POST",
                 url: "php/checkuser.php?benutzername=" + username + "&passwort=" + password,
                 success: function(response) {
-                    alert(response);
+                    
                     if(response == "true"){
                         document.cookie="userid=" + username;
                         window.location.href = "content.html";
+                    }else{
+                        alert("Wrong password!");
                     }
                 }
             });

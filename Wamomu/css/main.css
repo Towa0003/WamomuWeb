@@ -6,10 +6,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+/*
 #body2 {
     background-color: #EDEDED;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
 }
+*/
 /* Canvas Zeichenfläche */
 
 #myCanvas {
@@ -144,4 +146,18 @@ h2 {
 }
 
 
+header {
+    background-color: #2B7CB3;
+    width: auto;
+    height: 100px;
+    box-shadow: 0 1px 3px #000000;
+    margin-bottom: 10px;
+}
+#headertext {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 -1px 3px #666666, 0 1px 3px #000000;
+    font-size: 50px;
+    line-height: 100px;
+}
 
