@@ -5,7 +5,7 @@
  var measurementsdate = new Array();
  var measurementstime = new Array();
  var users = [];
- var userid = 1;
+var userid = 1;
 
  function start() {
      console.log("ready!");
@@ -20,6 +20,7 @@
              var jahr = (val.date).substring(0, 4);
              console.log(tag + "  " + monat + "  " + jahr)
              if (val.users_id == userid) {
+                 console.log("UserID. " + userid +  " exists!");
                  if (oldTag == tag && oldMonat == monat && oldJahr == jahr) {
                      console.log("Date exists!");
                  } else if (monat == "01") {
@@ -69,7 +70,7 @@
      var today = new Date();
      var d = today.getDate();
      var m = today.getMonth() + 1;
-     drawGraph(d, m);
+     drawGraph(d, m, userid);
      initializemeals();
  }
 
