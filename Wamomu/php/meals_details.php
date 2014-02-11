@@ -16,6 +16,5 @@ while($row=mysql_fetch_assoc($result)){
 }
 }
 mysql_close($con);
-//echo json_encode($json); 
 echo json_encode($json);
 ?> 

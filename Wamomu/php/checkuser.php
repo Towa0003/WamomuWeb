@@ -18,7 +18,7 @@ while($row = mysqli_fetch_array($result)){
 	}
 }
 
-echo "false";
+echo "Ungültige Kombination von Username und Passwort!";
 
 mysqli_close($con);
 ?>
