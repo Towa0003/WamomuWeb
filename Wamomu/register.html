@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<!--
+    <!--
     <script>
         function showUser(str) {
             if (str == "") {
@@ -23,7 +23,7 @@
         }
     </script>
 -->
-<link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
     <script>
         function addUser() {
 
@@ -51,18 +51,18 @@
 
 <body>
 
-     <header>
+    <header>
         <h1 id="headertext">Gluconator</h1>
     </header>
-    
-<!--
+
+    <!--
     <form>
         <input type="button" name="Text 2" value="ShowTable" onClick="showUser(this.value)">
     </form>
 
     <br>
 -->
-<!--
+    <!--
     <div id="txtHint">
         <b>Person info will be listed here.</b>
     </div>
@@ -72,6 +72,14 @@
 
     <form id="register">
         <p>
+            <p>
+                Vorname :
+            </p>
+            <input type="text" name="Vorname" id="Vorname">
+            <p>
+                Nachname :
+            </p>
+            <input type="text" name="Nachname" id="Nachname">
             <p>
                 Username :
             </p>
@@ -86,12 +94,11 @@
             <input type="password" name="PasswordRepeat" id="PasswordRepeat">
             </br>
             <input type="button" name="Text 2" value="Register" onClick="addUser()">
-            <br>
             <input type="button" name="Text 2" value="Login" onClick="parent.location='login.html'">
         </p>
     </form>
 
-<!--
+    <!--
     <div id="txtSuccess">
         <b>Person info will be listed here.</b>
     </div>

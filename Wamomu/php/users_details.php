@@ -13,7 +13,6 @@ $json = array();
 if(mysql_num_rows($result)){
 while($row=mysql_fetch_assoc($result)){
     $json[]=$row;
-  //  $json['users'][]=$row;
 }
 }
 mysql_close($con);

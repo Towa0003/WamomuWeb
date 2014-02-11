@@ -12,7 +12,6 @@ $json = array();
  
 if(mysql_num_rows($result)){
 while($row=mysql_fetch_assoc($result)){
-//$json['measurements'][]=$row;
     $json[]=$row;
 }
 }
