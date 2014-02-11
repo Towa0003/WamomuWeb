@@ -94,24 +94,31 @@
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.clearRect(0, 0, c.width, c.height);
+            ctx.font = "10px sans-serif";
             var i = 10;
 
             $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
                 /* data will hold the php array as a javascript object */
-                ctx.strokeStyle = '#F00000'
+                ctx.strokeStyle = '#FF8400'
                 $.each(data, function (key, val) {
                     if (val.users_id == uid) {
                         // Wenn der übergebene Monat dem der Werte aus der Datenbank entspricht -> Linien zeichnen
                         if (month == (val.date).substring(5, 7)) {
                             if (day == (val.date).substring(8, 10)) {
-                                // Linien zu den Messwerten zeichnen
+                                // Linien zur Mahlzeit zeichnen
                                 ctx.beginPath();
-                                ctx.moveTo(i, 0);
-                                ctx.lineTo(i, 200);
+                                ctx.moveTo(i + 20, 0);
+                                ctx.lineTo(i + 20, 180);
                                 ctx.closePath();
+
+                                // Tag und Uhrzeit an Messwert schreiben
+                                ctx.fillStyle = "#FF8400";
+                                ctx.fillText((val.meal).substring(0, 45), i+22, 168);
+                                ctx.fillText((val.time).substring(0, 5), i +22, 178);
+
                                 ctx.lineWidth = 2.5;
-                ctx.stroke();
-                ctx.closePath();
+                                ctx.closePath();
+                                ctx.stroke();
                             } else {
                                 // Ansonsten nichts zeichnen
                             }
