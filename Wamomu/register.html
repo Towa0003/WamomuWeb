@@ -16,12 +16,18 @@
                     document.getElementById("txtSuccess").innerHTML = xmlhttp.responseText;
                 }
             }
-
+            var strv = document.getElementById("Vorname").value;
+            var strn = document.getElementById("Nachname").value;
             var str = document.getElementById("Username").value;
             var str1 = document.getElementById("Password").value;
             var str2 = document.getElementById("PasswordRepeat").value;
-            xmlhttp.open("GET", "php/adduser.php?benutzername=" + str + "&passwort=" + str1 + "&passwortrepeat=" + str2, true);
+            if(strv == "" || strn == "" || str == "" || str1 == "" || str2 ==""){
+                alert(unescape("Bitte alle Felder ausf%FCllen!"));
+            }else{
+            xmlhttp.open("GET", "php/adduser.php?vname=" + strv + "&nname=" + strn + "&benutzername=" + str + "&passwort=" + str1 + "&passwortrepeat=" + str2, true);
             xmlhttp.send();
+            parent.location='login.html';
+            }
         }
     </script>
 
@@ -31,7 +37,7 @@
 <body>
 
     <header>
-        <h1 id="headertext">Gluconator</h1>
+        <h1 id="headertext">GlucoControl</h1>
     </header>
 
     <form id="register">

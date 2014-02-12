@@ -1,4 +1,6 @@
 <?php
+$vname = strval($_GET['vname']);
+$nname = strval($_GET['nname']);
 $nutzername = strval($_GET['benutzername']);
 $passwort = strval($_GET['passwort']);
 $passwortrepeat = strval($_GET['passwortrepeat']);
@@ -23,9 +25,9 @@ $result = mysqli_query($con,"SELECT * FROM users");
 
 
 
-$sql="INSERT INTO users (id, user, password)
+$sql="INSERT INTO users (id, vname, nname, user, password)
 VALUES
-('','$nutzername','$passwort')";
+('','$vname','$nname','$nutzername','$passwort')";
 
 if (!mysqli_query($con,$sql))
   {

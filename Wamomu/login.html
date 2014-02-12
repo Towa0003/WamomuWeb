@@ -16,19 +16,23 @@
         function testUser() {
             username = document.getElementById("Username").value;
             password = document.getElementById("Password").value;
-            $.ajax({
-                type: "POST",
-                url: "php/checkuser.php?benutzername=" + username + "&passwort=" + password,
-                success: function(response) {
-                    
-                    if(response == "true"){
-                        document.cookie="userid=" + username;
-                        window.location.href = "content.html";
-                    }else{
-                        alert(response);
+            if(username == "" || password == ""){
+                alert("Bitte Username oder Passwort eingeben!");
+            }else{
+                $.ajax({
+                    type: "POST",
+                    url: "php/checkuser.php?benutzername=" + username + "&passwort=" + password,
+                    success: function(response) {
+                        
+                        if(response == "true"){
+                            document.cookie="userid=" + username;
+                            window.location.href = "content.html";
+                        }else{
+                            alert(response);
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     </script>
 
@@ -38,7 +42,7 @@
 <body>
 
     <header>
-        <h1 id="headertext">Gluconator</h1>
+        <h1 id="headertext">GlucoControl</h1>
     </header>
 
     <form id="login">
@@ -51,7 +55,7 @@
                 Password :
             </p>
             <p>
-                <input type="password" name="Password" id="Password" >
+                <input type="password" name="Password" id="Password">
             </p>
             <input type="button" name="Text 2" value="Login" id="loginBtn" onClick="testUser()">
 
