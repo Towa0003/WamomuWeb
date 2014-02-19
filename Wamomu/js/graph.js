@@ -1,3 +1,4 @@
+        // Horizontale Rasterlinien für den Canvas werden gezeichnet
         function grid() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
@@ -12,7 +13,8 @@
             ctx.closePath();
             ctx.stroke();
         }
-
+        // Graphische Anzeige der Messwerte und darstellung dieser Messwerte als Punkte und anzeige des Datums und der Uhrzeit
+        // Der aktuell ausgewählte Messwert wird Graphisch hervorgehoben
         function drawGraph(day, month, uid) {
             console.log("ONCLICK: " + day + ". " + month + " USER: " + uid);
             var start = true;
@@ -88,7 +90,7 @@
             });
 
         }
-
+// Die Mahlzeiten zwischen den Messwerten, werden durch einen Strich gekennzeichnet und die Uhrzeit wird hingeschrieben
         function mealStroke(day, month, uid) {
 
             var c = document.getElementById("myCanvas");

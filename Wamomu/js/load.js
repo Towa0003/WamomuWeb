@@ -1,7 +1,8 @@
  var userid = 0;
  var username;
  var cookie;
-
+// Wird beim laden der Seite aufgerufen und setzt die Buttons der Tage, für die Messwerte und Mahlzeiten, in den jeweiligen Monat.
+// Zuletzt wird drawgraph() aufgerufen um den Wert des letzten hinzugefügten Tages in dem Graph anzeigen zulassen
  function start() {
      console.log("ready!");
      cookie = document.cookie;
@@ -9,7 +10,6 @@
      getuserid(username);
      console.log("username" + username)
      $.getJSON('/Wamomuweb/wamomu/php/meals_details.php', function (data) {
-         /* data will hold the php array as a javascript object */
          var oldTag = 0;
          var oldMonat = 0;
          var oldJahr = 0;
@@ -68,8 +68,6 @@
              oldMonat = monat;
              oldJahr = jahr;
          });
-         console.log("LETZTER TAG " + oldTag);
-         //            Date-Objekt um die Messwerte des aktuellen Monats anzuzeigen
          var d = oldTag
          var m = oldMonat;
          drawGraph(d, m, userid);
@@ -77,7 +75,7 @@
      });
 
  }
-
+// getter für die userid, um die Daten des eingeloggten Users anzuzeigen
  function getuserid(user) {
      console.log("getuserid from " + user);
      $.getJSON('/Wamomuweb/wamomu/php/users_details.php', function (data) {

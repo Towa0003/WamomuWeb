@@ -4,11 +4,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <script>
+        // Hinzufügen des users in die Datenbank
         function addUser() {
 
-            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+            if (window.XMLHttpRequest) { // code für IE7+, Firefox, Chrome, Opera, Safari
                 xmlhttp = new XMLHttpRequest();
-            } else { // code for IE6, IE5
+            } else { // code für IE6, IE5
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
             xmlhttp.onreadystatechange = function() {

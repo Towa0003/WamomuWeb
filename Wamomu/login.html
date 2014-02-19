@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script>
+        // Durch Drücken von "Enter", wird der LoginButton gedrückt
         $(document).ready(function(data){
            $('#Password,#Username').keypress(function(event){
                 if(event.keyCode == 13){
@@ -12,7 +13,7 @@
             });
         });
 
-
+        // Überprüfung der eingegebenen Login-Daten aus den inputs, mit den Daten aus der Datenbank
         function testUser() {
             username = document.getElementById("Username").value;
             password = document.getElementById("Password").value;
